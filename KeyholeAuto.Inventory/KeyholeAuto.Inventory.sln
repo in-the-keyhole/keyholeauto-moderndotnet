@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyholeAuto.Inventory.API", "KeyholeAuto.Inventory.API\KeyholeAuto.Inventory.API.csproj", "{50C5D71E-95F1-429E-87FD-65EAF19074CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyholeAuto.Inventory.Model", "KeyholeAuto.Inventory.Model\KeyholeAuto.Inventory.Model.csproj", "{0468D041-2838-4387-B2E2-3990C3827A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyholeAuto.Inventory.DAL", "KeyholeAuto.Inventory.DAL\KeyholeAuto.Inventory.DAL.csproj", "{7CCE2FEA-48E8-46CC-88EE-46A822EBEE5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyholeAuto.Inventory.Service", "KeyholeAuto.Inventory.Service\KeyholeAuto.Inventory.Service.csproj", "{8F4E63A5-C733-4311-B968-A63F67872F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50C5D71E-95F1-429E-87FD-65EAF19074CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C5D71E-95F1-429E-87FD-65EAF19074CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C5D71E-95F1-429E-87FD-65EAF19074CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C5D71E-95F1-429E-87FD-65EAF19074CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0468D041-2838-4387-B2E2-3990C3827A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0468D041-2838-4387-B2E2-3990C3827A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0468D041-2838-4387-B2E2-3990C3827A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0468D041-2838-4387-B2E2-3990C3827A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CCE2FEA-48E8-46CC-88EE-46A822EBEE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCE2FEA-48E8-46CC-88EE-46A822EBEE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCE2FEA-48E8-46CC-88EE-46A822EBEE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCE2FEA-48E8-46CC-88EE-46A822EBEE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4E63A5-C733-4311-B968-A63F67872F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4E63A5-C733-4311-B968-A63F67872F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4E63A5-C733-4311-B968-A63F67872F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4E63A5-C733-4311-B968-A63F67872F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2007118E-2C6B-40FF-9322-BAE4CCA02335}
+	EndGlobalSection
+EndGlobal

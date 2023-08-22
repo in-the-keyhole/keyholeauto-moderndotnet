@@ -1,0 +1,3 @@
+extend type VehicleModel {
+	saleHistory: VehicleSaleHistoryModel @delegate(schema: "financing", path: "vehicleSaleHistory(vin: $fields:vin)")
+}
