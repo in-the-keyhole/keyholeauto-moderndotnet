@@ -54,14 +54,11 @@ jobs:
           username: ${{ secrets.KEYHOLEAUTO_ACR_DEV_USERNAME }}
           password: ${{ secrets.KEYHOLEAUTO_ACR_DEV_PASSWORD }}
 
-      - name: Lowercase the repo name and username
-        run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-
       - name: Build and push container image to registry
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: keyholeauto.azurecr.io/${{ env.REPO }}:latest
+          tags: keyholeauto.azurecr.io/keyholeauto-inventory:latest
           file: ./KeyholeAuto.Inventory/Dockerfile
 
   deploy:
