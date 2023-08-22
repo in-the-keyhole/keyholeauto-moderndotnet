@@ -1,8 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 WORKDIR /app
 COPY . .
-RUN ls -al
-RUN pwd
 RUN dotnet restore
 RUN dotnet public -c Release -o out
 
