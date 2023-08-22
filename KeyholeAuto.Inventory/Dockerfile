@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 WORKDIR /app
-COPY . .
+COPY ./KeyholeAuto.Inventory/ .
 RUN dotnet restore
 RUN dotnet public -c Release -o out
 
