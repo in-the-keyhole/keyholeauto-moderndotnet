@@ -44,6 +44,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
@@ -58,7 +62,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: keyholeauto.azurecr.io/keyholeauto-inventory:latest
+          tags: keyholeauto.azurecr.io/keyholeauto-inventory:${{ steps.date.outputs.date }}-${GITHUB_RUN_NUMBER}
           file: ./KeyholeAuto.Inventory/Dockerfile
 
   deploy:
