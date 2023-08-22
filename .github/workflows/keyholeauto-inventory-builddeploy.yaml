@@ -62,7 +62,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: keyholeauto.azurecr.io/keyholeauto-inventory:${{ steps.date.outputs.date }}-${GITHUB_RUN_NUMBER}
+          tags: keyholeauto.azurecr.io/keyholeauto-inventory:${{ steps.date.outputs.date }}-${{ github.run_number }}
           file: ./KeyholeAuto.Inventory/Dockerfile
 
   deploy:
