@@ -18,15 +18,17 @@ builder.Services.AddSingleton<InventoryDatabase>();
 builder.Services.AddSingleton<InventoryService>();
 
 // GraphQL
-builder.Services.AddSingleton(
-    ConnectionMultiplexer.Connect(
-        builder.Configuration.GetConnectionString("GraphQL-APIGateway-Redis")
-    ));
-builder.Services.AddGraphQLServer()
-    .AddQueryType<InventoryQuery>()
-    .InitializeOnStartup()
-    .PublishSchemaDefinition(c => c.SetName("inventory")
-                                   .PublishToRedis("KeyholeAuto", sp => sp.GetRequiredService<ConnectionMultiplexer>()));
+var graphQLServer = builder.Services.AddGraphQLServer().AddQueryType<InventoryQuery>();
+
+var redisConnectionString = builder.Configuration.GetConnectionString("GraphQL-APIGateway-Redis");
+if (!string.IsNullOrEmpty(redisConnectionString))
+{
+    builder.Services.AddSingleton(ConnectionMultiplexer.Connect(redisConnectionString));
+
+    graphQLServer.InitializeOnStartup()
+                 .PublishSchemaDefinition(c => c.SetName("inventory")
+                     .PublishToRedis("KeyholeAuto", sp => sp.GetRequiredService<ConnectionMultiplexer>()));
+}
 
 var app = builder.Build();
 
